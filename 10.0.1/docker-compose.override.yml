@@ -34,9 +34,6 @@ services:
       - .\docker\deploy\platform:C:\deploy
       - ${HOST_LICENSE_FOLDER}:C:\license
     entrypoint: powershell.exe -Command "& C:\tools\entrypoints\iis\Development.ps1"
-    healthcheck:
-      test: ["CMD", "curl.exe", "-fs", "http://localhost:80/healthz/live"]
-      timeout: 300s
     depends_on:
       mssql:
         condition: service_healthy
