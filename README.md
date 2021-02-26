@@ -28,4 +28,4 @@ To run tests, switch to each version directory and run `Invoke-TestPerformance.p
 
 ## Observations
 
-1. The `<retryer />` had to be enabled on 10.1.0 just to be able to run tests else it will fail with various SQL connection exceptions, this leads be to believe that it could be somehow SQL related.
+1. The `<retryer />` had to be enabled on 10.1.0 just to be able to run tests else it will fail during warmup with various SQL connection exceptions, this leads be to believe that it could be somehow SQL related.
