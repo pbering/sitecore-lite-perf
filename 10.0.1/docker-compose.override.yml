@@ -27,7 +27,6 @@ services:
       Sitecore_AppSettings_Telerik.AsyncUpload.ConfigurationEncryptionKey: ${TELERIK_ENCRYPTION_KEY}
       Sitecore_AppSettings_Telerik.Upload.ConfigurationHashKey: ${TELERIK_ENCRYPTION_KEY}
       Sitecore_AppSettings_Telerik.Web.UI.DialogParametersEncryptionKey: ${TELERIK_ENCRYPTION_KEY}
-      Sitecore_AppSettings_exmEnabled:define: "no"
       MEDIA_REQUEST_PROTECTION_SHARED_SECRET: ${MEDIA_REQUEST_PROTECTION_SHARED_SECRET}
       SITECORE_LICENSE_LOCATION: C:\license\license.xml
       SOLR_CORE_PREFIX_NAME: ${SOLR_CORE_PREFIX_NAME}
@@ -35,6 +34,9 @@ services:
       - .\docker\deploy\platform:C:\deploy
       - ${HOST_LICENSE_FOLDER}:C:\license
     entrypoint: powershell.exe -Command "& C:\tools\entrypoints\iis\Development.ps1"
+    healthcheck:
+      test: ["CMD", "curl.exe", "-fs", "http://localhost:80/healthz/live"]
+      timeout: 300s
     depends_on:
       mssql:
         condition: service_healthy

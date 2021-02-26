@@ -68,6 +68,7 @@
     <Content Include="App_Config\Include\Sitecore.DisableIdentityServer.config" />
     <Content Include="App_Config\Include\Sitecore.CookieSameSiteLax.config" />
     <Content Include="App_Config\Include\Sitecore.PerformanceTweaks.config" />
+    <Content Include="App_Config\Include\Sitecore.Retryer.config" />
     <None Include="Platform.wpp.targets" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Web.config" />
@@ -78,7 +79,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
