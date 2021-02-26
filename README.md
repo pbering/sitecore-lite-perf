@@ -24,7 +24,7 @@ Avg recycle:  6074,94 ms <--
 
 To run tests, switch to each version directory and run `Invoke-TestPerformance.ps1`.
 
-> Above numbers are tests done on the same machine, an AMD Ryzen 9 3900X CPU (3.8GHz/4.6GHz, 12 cores, 24 threads), 64 GB RAM, PCIe 4.0 NVMe SSD, you may not see the same number but you should see the same difference.
+> Above numbers are tests done on the same machine, an AMD Ryzen 9 3900X CPU (3.8GHz/4.6GHz, 12 cores, 24 threads), 64 GB RAM, PCIe 4.0 NVMe SSD, you may not see the same numbers but you should see the same difference.
 
 ## Observations
 
