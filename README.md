@@ -24,6 +24,8 @@ Avg recycle:  6074,94 ms <--
 
 To run tests, switch to each version directory and run `Invoke-TestPerformance.ps1`.
 
-## Observations:
+> Above numbers are tests done on the same machine, an AMD Ryzen 9 3900X 24 core CPU, 64 GB RAM, PCIe 4.0 NVMe SSD, you may not see the same number but you should see the same difference.
+
+## Observations
 
 1. The `<retryer />` had to be enabled on 10.1.0 just to be able to run tests else it will fail with various SQL connection exceptions, this leads be to believe that it could be somehow SQL related.
